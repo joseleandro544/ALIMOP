@@ -15,18 +15,25 @@ img{
 
 /* Contenedor */
 .contenedor{
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     padding-bottom: 40px;
 }
 
 /* Header - Encabezado menu*/
 .header{
+    position: fixed;
     padding-top: 10px;
-    width: 90%;
+    width: 100%;
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /*border del encabezado*/
+        border-style: solid;
+        border-color: black;
+        border-radius: 20px;
+        border-width: 2px;
+        background-color: white;
 }
 
 /* Logo */
@@ -36,7 +43,10 @@ img{
 
 /* imagen del icono menu*/
 .menu{
-    width: 50px;
+    width: 30px;
+}
+@media (min-width: 768px) {
+    .menu{display: nome;}
 }
 
 /* Boton el icono menu*/
@@ -112,10 +122,39 @@ img{
 
 /* Mensaje */
 .Mensaje{
-    width: 800;
-    position: relative;
-    left: 200px;
-    top: 80px;
+    height: 100px;
+    width: 1800px;
+    position: fixed;
+    left: 1px;
+    top: 104px;
+    background-size: 50px 50px;
+}
+/* Titulo de Promociones */
+.TituloPromociones{
+    width: 90%;
+    position: fixed;
+    top: 190px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.Promocion1{
+    top: 800px;
+    height: 200px;
+    width: 100px;
+    margin: 10px;
+}
 
+.Promocion2{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.Promocion3{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
