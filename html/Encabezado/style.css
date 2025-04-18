@@ -1,0 +1,121 @@
+/*Tipo de fuente de texto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Tamaño imagenes */
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor */
+.contenedor{
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 40px;
+}
+
+/* Header - Encabezado menu*/
+.header{
+    padding-top: 10px;
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo{
+    width: 50px;
+}
+
+/* imagen del icono menu*/
+.menu{
+    width: 50px;
+}
+
+/* Boton el icono menu*/
+.menu:hover{
+    cursor: pointer;
+}
+
+/* Opciones en el encabezado */
+.navegacion{
+    display: none;
+}
+@media(min-width: 768px){
+    .menu{
+        display: flex;
+    }
+}
+
+/* Navegacion */
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+@media (min-width:768px){
+    .navegacion{
+        gap: 30px;
+    }
+}
+
+@media (min-width:992px){
+    .navegacion{
+        gap: 50px;
+    }
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* Navegacion - cambien de color */
+.navegacion a:hover{
+    color: black;
+}
+
+/* Navegacion - Boton de ingreso*/
+.navegacion li:last-child{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navegacion li:last-child{
+    font-weight: 700;
+}
+
+.navegacion li:last-child a:last-child{
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid orange;
+}
+
+.navegacion li:last-child a:last-child:hover{
+    background-color: white;
+    color: orange;
+}
+
+/* Mensaje */
+.Mensaje{
+    width: 800;
+    position: relative;
+    left: 200px;
+    top: 80px;
+}
+
+
