@@ -122,39 +122,46 @@ img{
 
 /* Mensaje */
 .Mensaje{
-    height: 100px;
-    width: 1800px;
-    position: fixed;
-    left: 1px;
-    top: 104px;
-    background-size: 50px 50px;
-}
-/* Titulo de Promociones */
-.TituloPromociones{
-    width: 90%;
-    position: fixed;
-    top: 190px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    color: rgb(251, 246, 246);
+    background-color: blue;
 }
 
+/* Titulo de las Promociones*/
+.TituloPromociones{
+
+}
+
+
+
 .Promocion1{
-    top: 800px;
-    height: 200px;
-    width: 100px;
-    margin: 10px;
+    height: 100px;
+    width: 30%; /*ancho*/
+    margin-inline: auto;
+    background-color: white;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
 .Promocion2{
     height: 100px;
-    width: 100px;
-    margin: 10px;
+    width: 30%; /*ancho*/
+    margin-inline: auto;
+    background-color: white;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
 .Promocion3{
     height: 100px;
-    width: 100px;
-    margin: 10px;
+    width: 30%; /*ancho*/
+    margin-inline: auto;
+    background-color: white;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
