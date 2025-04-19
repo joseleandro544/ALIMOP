@@ -20,31 +20,41 @@ img{
 }
 
 /* Header - Encabezado menu*/
-.header{
+.header {
+    height: 120px;
     position: fixed;
+    top: 0; 
     padding-top: 10px;
     width: 100%;
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*border del encabezado*/
-        border-style: solid;
-        border-color: black;
-        border-radius: 20px;
-        border-width: 2px;
-        background-color: white;
+
+    /* Estilo visual */
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    border-width: 2px;
+    background-color: white;
+    z-index: 1000;
 }
 
-/* Logo */
-.logo{
-    width: 50px;
-}
-
-/* imagen del icono menu*/
-.menu{
+/*lodo del menu*/
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 30px;
+    height: auto;
 }
+.menu, .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
 @media (min-width: 768px) {
     .menu{display: nome;}
 }
@@ -53,6 +63,19 @@ img{
 .menu:hover{
     cursor: pointer;
 }
+
+/* Despliegue del menu*/
+.menu-desplegable {
+    position: absolute;
+    top: 120px; /* debajo del header */
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none; /* oculto por defecto */
+    z-index: 999;
+}
+
 
 /* Opciones en el encabezado */
 .navegacion{
@@ -63,6 +86,30 @@ img{
         display: flex;
     }
 }
+
+/* Opciones del boton lupa de busqueda */
+.busqueda {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+}
+
+.input-busqueda {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-busqueda {
+    padding: 5px 10px;
+    background-color: #005ea8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 /* Navegacion */
 .navegacion{
@@ -91,7 +138,7 @@ img{
     font-size: 15px;
 }
 
-/* Navegacion - cambien de color */
+/* Navegacion - cambien de color boton ingreso*/
 .navegacion a:hover{
     color: black;
 }
@@ -120,48 +167,140 @@ img{
     color: orange;
 }
 
-/* Mensaje */
-.Mensaje{
-    color: rgb(251, 246, 246);
-    background-color: blue;
+/* Mensaje - ¡ayudenes a reducir la persida de alimentos!*/
+.mensaje-azul {
+    margin-top: 130px; 
+    background-color: #005ea8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
 }
 
-/* Titulo de las Promociones*/
-.TituloPromociones{
+/* Titulo de las Super Promociones*/
+.Promociones {
+    padding: 20px;
+    text-align: left;
+    padding-left: 30px;
+}
 
+.TituloPromociones {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 
-
-.Promocion1{
-    height: 100px;
-    width: 30%; /*ancho*/
-    margin-inline: auto;
-    background-color: white;
-    padding: 15%;
+/* Estilo del contenedor */
+.contenedor-promociones {
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 10 50px;
+    box-sizing: border-box;
 }
 
-.Promocion2{
-    height: 100px;
-    width: 30%; /*ancho*/
-    margin-inline: auto;
-    background-color: white;
-    padding: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+/* Asegura que cada div con la imagen ocupe el mismo ancho */
+.contenedor-promociones > div {
+    flex: 1 1 30%;
 }
 
-.Promocion3{
-    height: 100px;
-    width: 30%; /*ancho*/
-    margin-inline: auto;
-    background-color: white;
-    padding: 15%;
-    display: flex;
+/* Ajusta el tamaño de la imagen */
+.contenedor-promociones img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .contenedor-promociones {
+        flex-direction: column;
+    }
+
+    .contenedor-promociones > div {
+        width: 100%;
+    }
+}
+
+
+/* Franjas azules que separan cada seccion*/
+.separador-azul {
+    background-color: #005ea8;
+    height: 10px;
+    margin: 20px 0;
+}
+
+/* Titulo Productos recomendados*/
+.recomendados{
+    padding: 20px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.RecomendadosImg{
+    max-width: 98%;   
+    height: auto;    
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px rgba(36, 35, 35, 0.1); 
+}
+
+/* Titulo ¿Necesitas algo?*/
+.TituloIconos{
+    padding: 20px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+/* Estilos sección iconos */
+.iconos {
+    padding: 20px; 
+    text-align: center; 
+}
+
+.TituloIconos {
+    margin-bottom: 20px; 
+}
+
+/* Contenedor para los iconos */
+.iconos > div {
+    display: inline-flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+    padding: 10px; 
+
+.iconos img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.iconos p {
+    font-size: 1em; 
+    margin: 0; 
+}
+
+
+/* Estilos para el pie de página */
+.Final {
+    background-color: #2c3e50; /* Un tono de azul oscuro. Puedes cambiarlo al azul que prefieras */
+    color: #ffffff; /* Color del texto en blanco para contrastar con el azul */
+    padding: 20px; /* Espacio interno alrededor del contenido del pie de página */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.FinalPagina {
+    font-size: 1.2em; /* Tamaño de fuente para el título principal */
+    margin-bottom: 10px; /* Espacio entre los dos títulos */
+    font-weight: bold; /* Hace el texto más grueso */
+}
+
+.piePagina {
+    font-size: 0.9em; /* Tamaño de fuente para la información secundaria */
+    margin-top: 0; /* Elimina el margen superior predeterminado */
 }

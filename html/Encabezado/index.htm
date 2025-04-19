@@ -15,16 +15,42 @@
         <!--Encabezado-->
         <header class="header">
 
-            <!--Logo-->
-            <div class="logo">
-                <img src="imagenes/Logo/logo.jpg" alt="logo">
-                <p>ALIMOP</p>
-            </div>
+            <!-- Contenedor para menu-->
+            <div class="menu-logo">
 
-            <!--Menu-->
-            <div class="menu">
+                 <!-- Menu -->
+                <div class="menu" id="btnMenu">
                 <img src="imagenes/iconosMenu/menu.png" alt="menu">
                 <p>Menú</p>
+                </div>
+
+                 <!-- Logo -->
+                <div class="logo">
+                <img src="imagenes/Logo/logo.jpg" alt="logo">
+                <p>ALIMOP</p>
+                </div>
+
+            </div>
+
+            <!--Menu desplegable de las opciones-->
+            <div class="menu-desplegable" id="menuDesplegable">
+                <ul>
+                    <li>Comidas rápidas</li>
+                    <li>Frutas</li>
+                    <li>Verduras</li>
+                    <li>Restaurantes</li>
+                    <li>Super Mercados</li>
+                    <li>Panadería</li>
+                    <li>Carnicerías</li>
+                    <li>Tienda de Barrio</li>
+                </ul>
+            </div>
+
+
+            <!--Opciones Boton de Busquedas-->
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar..." class="input-busqueda">
+                <button class="btn-busqueda">🔍</button>
             </div>
 
             <!--Opciones en el encabezado-->
@@ -38,32 +64,40 @@
                 </ul>
             </nav>
             
-            <!--Barra de Mensaje-->
-            <nav>
-                <h2 class="Mensaje">¡Ayúdanos a reducir la perdida de alimentos!</h2> 
-            </nav>   
- 
         </header>
-        <!--Cerramos el encabezado-->
 
-
-        <!--inicio Súper promociones-->
+        <nav>
+            <!--Barra de Mensaje-->
+            <div class="mensaje-azul">
+                <h2 class="Mensaje">¡Ayúdanos a reducir la perdida de alimentos!</h2> 
+            </div>
+        </nav>
+    
         
+        <!--inicio Súper promociones-->
         <section class="Promociones">
-            <h2 class="TituloPromociones">Súper promociones</h2>
-            
-            <div class="Promocion1">
-                <img src="imagenes/Promociones/Promocion1.JPG" alt="Promocion1"></div>
-            <div class="Promocion2">
-                <img src="imagenes/Promociones/Promocion2.JPG" alt="Promocion2"></div>
-            <div class="Promocion3">
-                <img src="imagenes/Promociones/Promocion3.JPG" alt="Promocion3"></div>
 
+            <h2 class="TituloPromociones">Súper promociones
+            </h2>
+            
+            <div class="contenedor-promociones">
+                <div class="Promocion1">
+                    <img src="imagenes/Promociones/Promocion1.JPG" alt="Promocion1">
+                </div>
+                <div class="Promocion2">
+                    <img src="imagenes/Promociones/Promocion2.JPG" alt="Promocion2">
+                </div>
+                <div class="Promocion3">
+                    <img src="imagenes/Promociones/Promocion3.JPG" alt="Promocion3">
+                </div>
+            </div>
         </section>
+
+         <!--Franja Azul para separar las secciones-->
+        <div class="separador-azul"></div>
 
 
         <!--inicio Productos recomendados-->
-
         <article class="recomendados">
             <h2 class="TituloRecomendados">Productos recomendados</h2>
             
@@ -72,6 +106,10 @@
             </div>
             
         </article>
+
+
+        <!--Franja Azul para separar las secciones-->
+        <div class="separador-azul"></div>
 
 
         <!--inicio iconos de opciones-->
@@ -113,8 +151,20 @@
             
             <h4 class="piePagina">ALIMOP.com S.A.S. NIT 1463718-8. Calle 85 #45-49 Piso 5, Bogotá, Colombia</h4>
             
-         
         </footer>
     </div>
+
+    <script>
+        const btnMenu = document.getElementById("btnMenu");
+        const menuDesplegable = document.getElementById("menuDesplegable");
+    
+        btnMenu.addEventListener("click", () => {
+            if (menuDesplegable.style.display === "block") {
+                menuDesplegable.style.display = "none";
+            } else {
+                menuDesplegable.style.display = "block";
+            }
+        });
+    </script>
 </body>
 </html>
