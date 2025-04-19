@@ -277,9 +277,9 @@ img{
 }
 
 .iconos img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
 }
 
 .iconos p {
@@ -290,7 +290,7 @@ img{
 
 /* Estilos para el pie de página */
 .Final {
-    background-color: #005ea8 !important; 
+    background-color: #005ea8; 
     color: white;
     padding: 30px 20px;
     text-align: center;
