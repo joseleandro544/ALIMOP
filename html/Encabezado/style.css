@@ -1,3 +1,4 @@
+
 /*Tipo de fuente de texto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
@@ -288,19 +289,23 @@ img{
 
 /* Estilos para el pie de página */
 .Final {
-    background-color: #2c3e50; /* Un tono de azul oscuro. Puedes cambiarlo al azul que prefieras */
-    color: #ffffff; /* Color del texto en blanco para contrastar con el azul */
-    padding: 20px; /* Espacio interno alrededor del contenido del pie de página */
-    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #005ea8 !important; 
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .FinalPagina {
-    font-size: 1.2em; /* Tamaño de fuente para el título principal */
-    margin-bottom: 10px; /* Espacio entre los dos títulos */
-    font-weight: bold; /* Hace el texto más grueso */
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .piePagina {
-    font-size: 0.9em; /* Tamaño de fuente para la información secundaria */
-    margin-top: 0; /* Elimina el margen superior predeterminado */
+    font-size: 16px;
+    margin: 0;
 }
